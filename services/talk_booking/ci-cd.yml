@@ -3,7 +3,7 @@ service-talk-booking-code-quality:
   image: registry.gitlab.com/adrianhuber17/talk-booking:cicd-python3.9-slim
   before_script:
     - cd services/talk_booking/
-    - pip install -r requirements.txt
+    - pip install flake8 black isort bandit safety
   script:
     - flake8 .
     - black . --check
