@@ -16,7 +16,7 @@ service-talk-booking-tests:
   image: registry.gitlab.com/adrianhuber17/talk-booking:cicd-python3.9-slim
   before_script:
     - cd services/talk_booking/
-    - pip install pytest pytest-cov
+    - pip install pytest pytest-cov flask
   script:
     - python3 -m pytest --cov=./
   # after_script:
