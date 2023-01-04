@@ -11,6 +11,6 @@ RUN curl -sSL https://bootstrap.pypa.io/get-pip.py | python3 -
 RUN python3 -m pip install virtualenv
 RUN python3 -m virtualenv env
 RUN echo "source env/bin/activate" >> ~/.bashrc
-COPY ./requirements.txt /requirements.txt
+COPY requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 ENV PATH=/home/gitlab/env/bin:$PATH
