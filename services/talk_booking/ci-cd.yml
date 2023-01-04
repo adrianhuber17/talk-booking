@@ -18,10 +18,10 @@ service-talk-booking-tests:
     - cd services/talk_booking/
     - pip install pytest
   script:
-    - python -m pytest --cov=./ tests/unit tests/integration
-  after_script:
-    - bash <(curl -s https://codecov.io/bash)
-  artifacts:
-    when: always
-    # reports:
-    #   junit: services/talk_booking/report.xml
+    - python3 -m pytest --cov=./
+  # after_script:
+  #   - bash <(curl -s https://codecov.io/bash)
+  # artifacts:
+  #   when: always
+  # reports:
+  #   junit: services/talk_booking/report.xml
