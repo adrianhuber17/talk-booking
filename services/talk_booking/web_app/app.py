@@ -7,5 +7,6 @@ app = Flask(__name__)
 def health_check():
     return "OK"
 
+
 if __name__ == "__main__":  # pragma: no cover
     app.run(debug=True)
