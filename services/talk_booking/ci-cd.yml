@@ -10,6 +10,12 @@ service-talk-booking-code-quality:
     - isort . --check-only --profile black
     - bandit .
     - safety check
+  only:
+    refs:
+      - merge_requests
+      - master
+    changes:
+      - services/talk_booking/**/*
 
 service-talk-booking-tests:
   stage: test
@@ -25,3 +31,9 @@ service-talk-booking-tests:
     when: always
     reports:
       junit: services/talk_booking/report.xml
+  only:
+    refs:
+      - merge_requests
+      - master
+    changes:
+      - services/talk_booking/**/*
