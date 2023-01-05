@@ -23,5 +23,5 @@ service-talk-booking-tests:
     - bash <(curl -s https://codecov.io/bash)
   artifacts:
     when: always
-  reports:
-    junit: services/talk_booking/report.xml
+    reports:
+      junit: services/talk_booking/report.xml
